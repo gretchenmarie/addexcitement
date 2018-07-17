@@ -12,12 +12,18 @@ function addExcitement (theWordArray) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
+    let wordCount =0;
 
     for (let i = 0; i < theWordArray.length; i++) {
-        let currentword = theWordArray [i]
+        wordCount ++;
+        if ( wordCount %3 === 0){
+             buildMeUp += "!" .repeat(wordCount/3);
+        }
+        let currentword = theWordArray [i];
 
         // Concatenate the new word onto buildMeUp
-buildMeUp +=  currentword += " "
+
+        buildMeUp +=  " "  + currentword;
         // Print buildMeUp to the console
         console.log (buildMeUp)
     }
